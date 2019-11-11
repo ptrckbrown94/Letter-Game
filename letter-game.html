@@ -21,7 +21,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Enter a letter</span>
                     </div>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea id="user-letter" class="form-control" aria-label="With textarea"></textarea>
                 </div>
 
             </div>
@@ -44,9 +44,13 @@
     </div>
 
     <script>
-        function handleClick(str) {
-            alert(str);
+        function handleClick() {
+           const inputel = document.getElementById("user-letter");
+            console.log(inputel);
 
+            const userInput =  inputel.value;
+            console.log(userInput)
+ 
         }
     </script>
 
