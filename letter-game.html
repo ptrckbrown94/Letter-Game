@@ -45,12 +45,17 @@
 
     <script>
         function handleClick() {
-           const inputel = document.getElementById("user-letter");
+            const inputel = document.getElementById("user-letter");
             console.log(inputel);
 
-            const userInput =  inputel.value;
+            const userInput = inputel.value;
             console.log(userInput)
- 
+
+            if (userInput === "f") {
+                console.log("winner") 
+            } else {
+                console.log("Loser", "f", userInput)
+            }
         }
     </script>
 
