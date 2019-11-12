@@ -52,26 +52,29 @@
             console.log(randomIndex);
             const letterToGuess = letters[randomIndex];
             console.log(letterToGuess)
+
+            function handleClick() {
+                const inputel = document.getElementById("user-letter");
+                console.log(inputel);
+
+                const userInput = inputel.value;
+                console.log(userInput)
+
+                const winnerel = document.getElementById("winner");
+
+
+                if (userInput === "d") {
+                    winnerel.innerHTML = "winner";
+                } else {
+                    winnerel.innerHTML = "loser"
+                }
+            }
+            window.handleClick = handleClick
         }
         startgame();
 
 
-        function handleClick() {
-            const inputel = document.getElementById("user-letter");
-            console.log(inputel);
 
-            const userInput = inputel.value;
-            console.log(userInput)
-
-            const winnerel = document.getElementById("winner");
-
-
-            if (userInput === "d") {
-                winnerel.innerHTML = "winner";
-            } else {
-                winnerel.innerHTML = "loser"
-            }
-        }
     </script>
 
 </body>
