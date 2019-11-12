@@ -44,6 +44,9 @@
     </div>
 
     <script>
+
+
+
         function handleClick() {
             const inputel = document.getElementById("user-letter");
             console.log(inputel);
@@ -51,10 +54,15 @@
             const userInput = inputel.value;
             console.log(userInput)
 
+            const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            console.log(letters.length)
+
             if (userInput === "f") {
                 console.log("winner") 
+                winnerel.innerHTML = "winner";
             } else {
                 console.log("Loser", "f", userInput)
+                winnerel.innerHTML = "loser"
             }
         }
     </script>
