@@ -44,7 +44,16 @@
     </div>
 
     <script>
+        function startgame() {
 
+
+            const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            const randomIndex = Math.floor(Math.random() * letters.length);
+            console.log(randomIndex);
+            const letterToGuess = letters[randomIndex];
+            console.log(letterToGuess)
+        }
+        startgame();
 
 
         function handleClick() {
@@ -56,16 +65,10 @@
 
             const winnerel = document.getElementById("winner");
 
-            const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-            const randomIndex = Math.floor (Math.random() * letters.length);
 
-            console.log(randomIndex);
-          
-            if (userInput === letters[randomIndex]) {
-                console.log("winner")
+            if (userInput === "d") {
                 winnerel.innerHTML = "winner";
             } else {
-                console.log("Loser", "f", userInput)
                 winnerel.innerHTML = "loser"
             }
         }
