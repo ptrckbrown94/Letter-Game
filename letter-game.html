@@ -74,11 +74,13 @@
                     }
                     guesses.push(userInput);
                     console.log(guesses)
+
+                    let message = "You guest: ";
                     for (let i = 0; i < guesses.length; i++) {
                         const guess = guesses[i]
-
+                        message = message + guess + ",";
                     }
-                    //winnerel.innerHTML = "loser"
+                    winnerel.innerHTML = message;
                 }
             }
             window.handleClick = handleClick
