@@ -35,7 +35,7 @@
             <div class="col-12">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h1 id="winner" class="display-4 text-center">Winner!!!</h1>
+                        <h1 id="winner" class="display-4 text-center">Letter Game</h1>
                         <p class="lead"></p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                 const winnerel = document.getElementById("winner");
 
 
-                if (userInput === "d") {
+                if (userInput === letters[randomIndex]) {
                     winnerel.innerHTML = "winner";
                 } else {
                     winnerel.innerHTML = "loser"
