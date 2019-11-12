@@ -53,7 +53,10 @@
             const letterToGuess = letters[randomIndex];
             console.log(letterToGuess)
 
+            const guesses = [];
+
             function handleClick() {
+
                 const inputel = document.getElementById("user-letter");
                 console.log(inputel);
 
@@ -66,7 +69,16 @@
                 if (userInput === letters[randomIndex]) {
                     winnerel.innerHTML = "winner";
                 } else {
-                    winnerel.innerHTML = "loser"
+                    if (guesses.includes(userInput)) {
+                        return alert("You've already guest this!")
+                    }
+                    guesses.push(userInput);
+                    console.log(guesses)
+                    for (let i = 0; i < guesses.length; i++) {
+                        const guess = guesses[i]
+
+                    }
+                    //winnerel.innerHTML = "loser"
                 }
             }
             window.handleClick = handleClick
