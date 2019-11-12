@@ -35,7 +35,7 @@
             <div class="col-12">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h1 class="display-4 text-center">Winner!!!</h1>
+                        <h1 id="winner" class="display-4 text-center">Winner!!!</h1>
                         <p class="lead"></p>
                     </div>
                 </div>
@@ -54,11 +54,15 @@
             const userInput = inputel.value;
             console.log(userInput)
 
-            const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-            console.log(letters.length)
+            const winnerel = document.getElementById("winner");
 
-            if (userInput === "f") {
-                console.log("winner") 
+            const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            const randomIndex = Math.floor (Math.random() * letters.length);
+
+            console.log(randomIndex);
+          
+            if (userInput === letters[randomIndex]) {
+                console.log("winner")
                 winnerel.innerHTML = "winner";
             } else {
                 console.log("Loser", "f", userInput)
